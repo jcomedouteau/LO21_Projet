@@ -11,9 +11,9 @@ public:
         info(message),file(f),line(l){}
     QString getInfo() const { return info; }
 #ifndef NDEBUG
-    // retourne le fichier dans lequel cettte exception a été levée.
+    // retourne le fichier dans lequel cettte exception a ï¿½tï¿½ levï¿½e.
     QString getFile() const { return file; }
-    // retourne la ligne du fichier à laquelle cette exception a été levée.
+    // retourne la ligne du fichier ï¿½ laquelle cette exception a ï¿½tï¿½ levï¿½e.
     unsigned int getLine() const { return line; }
 #endif
 private:
@@ -24,7 +24,7 @@ private:
 };
 
 enum Categorie {
-	/* Connaissances Scientifiques */ CS,  /* Techniques et Méthodes */ TM, 
+	/* Connaissances Scientifiques */ CS,  /* Techniques et Mï¿½thodes */ TM, 
     /* Technologies et Sciences de l'Homme */ TSH, /* Stage et Projet */ SP
 };
 
@@ -77,6 +77,16 @@ public:
 
 QTextStream& operator<<(QTextStream& f, const UV& uv);
 
+template<T>
+class Manager {
+	T** tab;
+	
+	public :
+	T* element(unsigned int i){return tab[i];}
+	void ajouter(T* t){
+		
+	}
+}
 
 class UVManager {
 private:
